@@ -16,6 +16,20 @@ module.exports = {
 
             xs: '320px'
         },
-        plugins: []
+        variants: {
+            extend: {
+                transform: ['hover', 'focus'],
+                rotate: ['hover', 'focus']
+            }
+        },
+
+        plugins: [],
+        extend: {
+            fontFamily: {
+                display: ['Quicksand', 'sans-serif'],
+                secondaryFont: ['Silka', 'sans-serif']
+            },
+            animation: {}
+        }
     }
 };
