@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ArrowUpRight, Minus } from 'lucide-react';
 import { submenu } from 'Data/menuLinks';
+import { Link } from 'react-router-dom';
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,7 @@ function Header() {
             <div className="p-3">
                 <header>
                     <nav className="grid grid-cols-3 gap-5 cursor-pointer select-none">
-                        <div className="absolute left-0 ml-6 z-10 col-span-1 transition-transform transform duration-700 ">
+                        <div className="absolute left-0 ml-6 z-30 col-span-1 transition-transform transform duration-700 ">
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 className={`h-10 w-10 flex flex-col duration-200 transition-all justify-center items-center rounded-full group bg-white  hover:bg-slate-700`}>
@@ -32,7 +33,7 @@ function Header() {
                             </button>
                         </div>
                         <div className="col-span-1 col-start-2 text-center relative align-middle">
-                            <h1 className="text-3xl font-semibold text-black right-0 xs:-ml-10 left-0 absolute z-10">
+                            <h1 className="text-3xl font-semibold text-black right-0 xs:-ml-10 left-0 absolute z-30">
                                 {isOpen ? 'Nihalxmhd' : 'Hello'}
                             </h1>
                         </div>
@@ -45,14 +46,14 @@ function Header() {
                 </header>
                 {isOpen && (
                     <div
-                        className="h-[100%] w-[100%] left-0 top-0  bg-right bg-cover fixed bg-no-repeat transition-transform transform duration-700"
+                        className="h-[100%] w-[100%] left-0 top-0  bg-right bg-cover fixed bg-no-repeat transition-transform transform duration-700 z-20"
                         style={{
                             backgroundImage: 'url("/menubg.png")'
                         }}>
                         <div className="backdrop-blur-[5px] h-[100%] w-[100%]">
                             <ul className="lg:pt-44 pt-28 cursor-pointer text-gray-300 lg:flex lg:gap-10 lg:justify-center align-baseline">
                                 <li className="text-3xl text-center font-bold hover:text-white mb-5">
-                                    Homepage
+                                    <Link to={'/homepage'}>Homepage</Link>
                                 </li>
                                 <li className="text-3xl text-center font-bold hover:text-white mb-5">
                                     Portfolio
