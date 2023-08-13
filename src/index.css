@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Space+Mono&display=swap');
+@import url('https://fonts.cdnfonts.com/css/rustico');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Space+Mono&display=swap'); */
+.font-rustico {
+    font-family: "Rustico", sans-serif;
+}
 
-* {
+.font-silkamono {
     font-family: 'Silka Mono', sans-serif;
 }
