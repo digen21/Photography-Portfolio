@@ -1,5 +1,6 @@
 # 1 
-FROM node:17
+FROM node:18
+
 WORKDIR /app
 
 # copying packege.json
@@ -18,4 +19,4 @@ RUN npm run build
 EXPOSE 3000
 
 # command to run
-CMD [ "npm", "run", "dev" ]
+CMD [ "npm", "start"]
