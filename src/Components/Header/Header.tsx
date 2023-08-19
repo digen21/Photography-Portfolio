@@ -1,16 +1,17 @@
 import { useState } from 'react';
 import { ArrowUpRight, Minus } from 'lucide-react';
 import { submenu } from 'Data/menuLinks';
+import { Link } from 'react-router-dom';
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <>
-            <div className="p-3 font-rustico">
-                <header>
+            <div className="font-rustico fixed top-0 z-50 w-screen left-0 h-[150px]">
+                <header className="p-5">
                     <nav className="grid grid-cols-3 gap-5 cursor-pointer select-none">
-                        <div className="absolute left-0 ml-6 z-10 col-span-1 transition-transform transform duration-700 ">
+                        <div className="absolute left-0 ml-6 z-50 col-span-1 transition-transform transform duration-700 ">
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 className={`h-10 w-10 flex flex-col duration-200 transition-all justify-center items-center rounded-full group bg-white  hover:bg-slate-700`}>
@@ -36,12 +37,12 @@ function Header() {
                                 className={`
                                 ${isOpen ? 'font-rustico tracking-widest' : 'font-silkamono'}
                                 
-                                text-3xl font-semibold text-black right-0 xs:-ml-10 left-0 absolute z-10`}>
+                                text-3xl font-semibold text-white right-0 xs:-ml-10 left-0 absolute z-10 hover:scale-110 transition-all`}>
                                 {isOpen ? 'Nihalxmhd' : 'Nihalxmhd'}
                             </h1>
                         </div>
-                        <div className="col-span-1 col-start-3 text-end mr-6 hidden md:block">
-                            <button className="bg-red-500 py-2 px-3 rounded-3xl text-xs align-baseline">
+                        <div className="col-span-1 col-start-3 text-end mr-6 hidden xs:block">
+                            <button className="bg-white py-2 px-3 rounded-3xl text-xs align-baseline hover:scale-110 transition-all">
                                 Get In Touch
                             </button>
                         </div>
@@ -49,7 +50,7 @@ function Header() {
                 </header>
                 {isOpen && (
                     <div
-                        className="h-[100%] w-[100%] left-0 top-0  bg-right bg-cover fixed bg-no-repeat transition-transform transform duration-700 font-silkamono"
+                        className="h-[100%] w-[100%]  left-0 top-0  bg-right bg-cover fixed bg-no-repeat transition-transform transform duration-700 font-silkamono"
                         style={{
                             backgroundImage: 'url("/menubg.png")'
                         }}>
