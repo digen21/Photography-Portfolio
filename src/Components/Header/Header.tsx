@@ -41,7 +41,7 @@ function Header() {
                                 {isOpen ? 'Nihalxmhd' : 'Nihalxmhd'}
                             </h1>
                         </div>
-                        <div className="col-span-1 col-start-3 text-end mr-6 hidden xs:block">
+                        <div className="col-span-1 col-start-3 text-end mr-6 hidden md:block">
                             <button className="bg-white py-2 px-3 rounded-3xl text-xs align-baseline hover:scale-110 transition-all">
                                 Get In Touch
                             </button>
