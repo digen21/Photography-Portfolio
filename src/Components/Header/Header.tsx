@@ -11,7 +11,7 @@ function Header() {
             <div className="font-rustico fixed top-5 z-50 w-screen left-0 h-[150px]">
                 <header className="p-5">
                     <nav className="grid grid-cols-3 gap-5 cursor-pointer select-none">
-                        <div className="absolute left-0 ml-6 z-50 col-span-1 transition-transform transform duration-700 ">
+                        <div className="absolute left-0 ml-6 z-50 col-span-1 transition-transform transform duration-700">
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 className={`h-12 w-12 flex flex-col duration-200 transition-all justify-center items-center rounded-full group bg-white  hover:bg-slate-700`}>
