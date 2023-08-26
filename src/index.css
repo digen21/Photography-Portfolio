@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Space+Mono&display=swap');
-@import url('https://fonts.cdnfonts.com/css/rustico');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Space+Mono&display=swap');
+@import url('https://db.onlinewebfonts.com/c/8ac5c76326cf61a4a117989ac10a2b90?family=Rustico');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: Rustico;
+    src: url('../public/fonts/Rustico-Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
 .font-rustico {
-    font-family: 'Rustico', sans-serif;
+    font-family: 'Rustico';
 }
 
 .font-silkamono {

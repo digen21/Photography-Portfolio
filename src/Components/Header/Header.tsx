@@ -8,47 +8,52 @@ function Header() {
 
     return (
         <>
-            <div className="font-rustico fixed top-5 z-50 w-screen left-0 h-[150px]">
-                <header className="p-5">
-                    <nav className="grid grid-cols-3 gap-5 cursor-pointer select-none">
-                        <div className="absolute left-0 ml-6 z-50 col-span-1 transition-transform transform duration-700">
-                            <button
-                                onClick={() => setIsOpen(!isOpen)}
-                                className={`h-12 w-12 flex flex-col duration-200 transition-all justify-center items-center rounded-full group bg-white  hover:bg-slate-700`}>
-                                <Minus
-                                    className={`   ${
-                                        isOpen
-                                            ? 'rotate-45 translate-x-0 translate-y-[2.5px] -mb-[22px] transition-transform'
-                                            : 'translate-y-0 -mb-[16px] transition-transform'
-                                    } `}
-                                />
+            <div className="fixed top-5 z-50 w-screen left-0 h-[150px]">
+                <header className="px-5">
+                    <nav className="grid grid-cols-3 gap-6">
+                        <div>
+                            <div className="absolute left-0 ml-12 z-50 col-span-1 transition-transform transform duration-700">
+                                <button
+                                    onClick={() => setIsOpen(!isOpen)}
+                                    className={`h-12 w-12 flex flex-col duration-200 transition-all justify-center items-center rounded-full group bg-white  hover:bg-slate-700`}>
+                                    <Minus
+                                        className={`   ${
+                                            isOpen
+                                                ? 'rotate-45 translate-x-0 translate-y-[2.5px] -mb-[22px] transition-transform'
+                                                : 'translate-y-0 -mb-[16px] transition-transform'
+                                        } `}
+                                    />
 
-                                <Minus
-                                    className={`   ${
-                                        isOpen
-                                            ? '-rotate-45 -translate-x-0 translate-y-0 transition-transform'
-                                            : 'translate-y-0 transition-transform'
-                                    }`}
-                                />
-                            </button>
+                                    <Minus
+                                        className={`   ${
+                                            isOpen
+                                                ? '-rotate-45 -translate-x-0 translate-y-0 transition-transform'
+                                                : 'translate-y-0 transition-transform'
+                                        }`}
+                                    />
+                                </button>
+                            </div>
                         </div>
-                        <div className="col-span-1 col-start-2 text-center relative align-middle">
+
+                        <div className="xs:col-span-2 lg:col-span-1 text-center relative">
                             <h1
                                 className={`
                                 ${
                                     isOpen
-                                        ? 'font-rustico tracking-widest'
-                                        : 'font-quicksand text-xl font-thin tracking-widest'
+                                        ? 'font-rustico tracking-widest absolute md:right-0 md:left-0'
+                                        : 'font-quicksand font-thin tracking-widest mt-2 text-xl xs:flex lg:justify-center xs:justify-start items-center'
                                 }
                                 
-                                text-4xl md:mt-2 font-semibold text-white right-0 xs:-ml-10 left-0 absolute z-10 hover:scale-110 transition-all`}>
+                                text-4xl  font-semibold text-white z-10  hover:scale-110 transition-all`}>
                                 {isOpen ? 'Nihalxmhd' : 'Nihal Mahummad'}
                             </h1>
                         </div>
-                        <div className="col-span-1 col-start-3 text-end mr-6 hidden md:block">
-                            <button className="bg-white text-center p-3 px-4 rounded-3xl text-[.75em] align-baseline hover:bg-[#000] hover:text-white transition-all font-quicksand font-semibold">
-                                Get In Touch
-                            </button>
+                        <div className="xs:hidden lg:block">
+                            <div className="text-end mr-12 hidden md:block">
+                                <button className="bg-white text-center p-3 px-4 rounded-3xl text-[.75em] align-baseline hover:bg-[#000] hover:text-white transition-all font-quicksand font-semibold">
+                                    Get In Touch
+                                </button>
+                            </div>
                         </div>
                     </nav>
                 </header>

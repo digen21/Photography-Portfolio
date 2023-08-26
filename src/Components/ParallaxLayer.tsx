@@ -24,7 +24,7 @@ function ParallaxLayer() {
                     className="max-w-[100%] h-screen -my-6  overflow-hidden relative grid place-items-center">
                     <motion.h1
                         style={{ y: textY }}
-                        className="font-bold text-7xl md:text-9xl relative z-10 font-rustico select-none">
+                        className="font-bold xs:text-6xl text-7xl md:text-9xl relative z-10 font-rustico select-none">
                         Nihalxmhd
                     </motion.h1>
 
