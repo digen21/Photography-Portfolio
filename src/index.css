@@ -72,3 +72,14 @@ body {
     -webkit-background-clip: text;
     background-image: linear-gradient(to right, #405DE6, #833AB4, #C13584);
 }
+
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
