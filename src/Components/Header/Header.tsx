@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { ArrowUpRight, Minus } from 'lucide-react';
-import { submenu } from 'Data/menuLinks';
-import { Link } from 'react-router-dom';
+import { submenu } from 'Links/menuLinks';
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +11,7 @@ function Header() {
                 <header className="px-5">
                     <nav className="grid grid-cols-3 gap-6">
                         <div>
-                            <div className="absolute left-0 ml-12 z-50 col-span-1 transition-transform transform duration-700">
+                            <div className="absolute left-0 ml-10 z-50 col-span-1 transition-transform transform duration-700">
                                 <button
                                     onClick={() => setIsOpen(!isOpen)}
                                     className={`h-12 w-12 flex flex-col duration-200 transition-all justify-center items-center rounded-full group bg-white  hover:bg-slate-700`}>
@@ -40,8 +39,8 @@ function Header() {
                                 className={`
                                 ${
                                     isOpen
-                                        ? 'font-rustico tracking-widest absolute md:right-0 md:left-0'
-                                        : 'font-quicksand font-thin tracking-widest mt-2 text-xl xs:flex lg:justify-center xs:justify-start items-center'
+                                        ? 'font-rustico tracking-widest mt-2 absolute md:right-0 md:left-0'
+                                        : 'font-quicksand font-thin mt-2 tracking-widest text-xl xs:flex lg:justify-center xs:justify-start items-center'
                                 }
                                 
                                 text-4xl  font-semibold text-white z-10  hover:scale-110 transition-all`}>

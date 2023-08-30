@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Instagram, MailOpen, Youtube } from 'lucide-react';
+import { Instagram, MailOpen, Twitter, Youtube } from 'lucide-react';
 
 function SocialBlock() {
     return (
@@ -17,6 +17,9 @@ function SocialBlock() {
                 </Link>
                 <Link className="hover:scale-110 transition-all" to={''}>
                     <MailOpen height={20} />
+                </Link>
+                <Link className="hover:scale-110 transition-all" to={''}>
+                    <Twitter />
                 </Link>
             </div>
         </div>
